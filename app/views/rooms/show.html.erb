@@ -84,21 +84,49 @@
 			</div>
 			<div class="col-md-10">
 				<div class="row">
-					<div class="col-md-6">
-						<ul class="amenities">
-							<li class="<%= 'text-line-through' if !@room.is_tv %>">TV</li>
+					<div class="col-md-4">
+						
 							<li class="<%= 'text-line-through' if !@room.is_kitchen %>">Kitchen</li>
 							<li class="<%= 'text-line-through' if !@room.is_internet %>">Internet</li>
-						</ul>
+							<li class="<%= 'text-line-through' if !@room.is_tv %>">TV</li>
+							<li class="<%= 'text-line-through' if !@room.is_essentials %>">Essentials</li>
+							<li class="<%= 'text-line-through' if !@room.is_shampoo %>">Shampoo</li>
+							<li class="<%= 'text-line-through' if !@room.is_heating %>">Heating</li>
+							<li class="<%= 'text-line-through' if !@room.is_air %>">Air Conditioning</li>
+							<li class="<%= 'text-line-through' if !@room.is_washer %>">Washer</li>
+							<li class="<%= 'text-line-through' if !@room.is_dryer %>">Dryer</li>
+							<li class="<%= 'text-line-through' if !@room.is_fr_parking %>">Free Parking on Premises</li>
+						
 					</div>
-					<div class="col-md-6">
-						<li class="<%= 'text-line-through' if !@room.is_heating %>">Heating</li>
-						<li class="<%= 'text-line-through' if !@room.is_air %>">Air Conditioning</li>
+					<div class="col-md-4">
+						<li class="<%= 'text-line-through' if !@room.is_w_internet %>">Wireless Internet</li>
+						<li class="<%= 'text-line-through' if !@room.is_c_tv %>">Cable TV</li>
+						<li class="<%= 'text-line-through' if !@room.is_breakfast %>">Breakfast</li>
+						<li class="<%= 'text-line-through' if !@room.is_pets_allowed %>">Pets Allowed</li>
+						<li class="<%= 'text-line-through' if !@room.is_family %>">Family/Kid Friendly</li>
+						<li class="<%= 'text-line-through' if !@room.is_s_events %>">Suitable for Events</li>
+						<li class="<%= 'text-line-through' if !@room.is_smoking %>">Smoking Allowed</li>
+						<li class="<%= 'text-line-through' if !@room.is_wheelchair %>">Wheelchair Accessible</li>
+						<li class="<%= 'text-line-through' if !@room.is_elevator %>">Elevator in Building</li>
+						<li class="<%= 'text-line-through' if !@room.is_indoor_fireplace %>">Indoor Fireplace</li>
+
+					</div>
+					<div class="col-md-4">
+						<li class="<%= 'text-line-through' if !@room.b_w_intercom %>">Buzzer/Wireless Interroom</li>
+						<li class="<%= 'text-line-through' if !@room.is_doorman %>">Doorman</li>
+						<li class="<%= 'text-line-through' if !@room.is_pool %>">Pool</li>
+						<li class="<%= 'text-line-through' if !@room.is_hottub %>">Hot Tub</li>
+						<li class="<%= 'text-line-through' if !@room.is_gym%>">Gym</li>
+						<li class="<%= 'text-line-through' if !@room.is_24h_checkin %>">24-Hour Check-in</li>
+						<li class="<%= 'text-line-through' if !@room.is_hangers %>">Hangers</li>
+						<li class="<%= 'text-line-through' if !@room.is_iron %>">Iron</li>
+						<li class="<%= 'text-line-through' if !@room.is_hair_dryer %>">Hair Dryer</li>
+						<li class="<%= 'text-line-through' if !@room.is_laptop_workspace %>">Laptop Friendly Workspace</li>
 					</div>
 				</div>
 			</div>
 		</div>
-
+<br><br>
 		<!-- Carousel -->
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">

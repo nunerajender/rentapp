@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925120708) do
+ActiveRecord::Schema.define(version: 20161026051338) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id",    limit: 4
@@ -71,26 +71,51 @@ ActiveRecord::Schema.define(version: 20150925120708) do
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "rooms", force: :cascade do |t|
-    t.string   "home_type",    limit: 255
-    t.string   "room_type",    limit: 255
-    t.integer  "accommodate",  limit: 4
-    t.integer  "bed_room",     limit: 4
-    t.integer  "bath_room",    limit: 4
-    t.string   "listing_name", limit: 255
-    t.text     "summary",      limit: 65535
-    t.string   "address",      limit: 255
-    t.boolean  "is_tv",        limit: 1
-    t.boolean  "is_kitchen",   limit: 1
-    t.boolean  "is_air",       limit: 1
-    t.boolean  "is_heating",   limit: 1
-    t.boolean  "is_internet",  limit: 1
-    t.integer  "price",        limit: 4
-    t.boolean  "active",       limit: 1
-    t.integer  "user_id",      limit: 4
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.float    "latitude",     limit: 24
-    t.float    "longitude",    limit: 24
+    t.string   "home_type",           limit: 255
+    t.string   "room_type",           limit: 255
+    t.integer  "accommodate",         limit: 4
+    t.integer  "bed_room",            limit: 4
+    t.integer  "bath_room",           limit: 4
+    t.string   "listing_name",        limit: 255
+    t.text     "summary",             limit: 65535
+    t.string   "address",             limit: 255
+    t.boolean  "is_tv",               limit: 1
+    t.boolean  "is_kitchen",          limit: 1
+    t.boolean  "is_air",              limit: 1
+    t.boolean  "is_heating",          limit: 1
+    t.boolean  "is_internet",         limit: 1
+    t.integer  "price",               limit: 4
+    t.boolean  "active",              limit: 1
+    t.integer  "user_id",             limit: 4
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.float    "latitude",            limit: 24
+    t.float    "longitude",           limit: 24
+    t.boolean  "is_essentials",       limit: 1
+    t.boolean  "is_shampoo",          limit: 1
+    t.boolean  "is_washer",           limit: 1
+    t.boolean  "is_dryer",            limit: 1
+    t.boolean  "is_fr_parking",       limit: 1
+    t.boolean  "is_w_internet",       limit: 1
+    t.boolean  "is_c_tv",             limit: 1
+    t.boolean  "is_breakfast",        limit: 1
+    t.boolean  "is_pets_allowed",     limit: 1
+    t.boolean  "is_family",           limit: 1
+    t.boolean  "is_s_events",         limit: 1
+    t.boolean  "is_smoking",          limit: 1
+    t.boolean  "is_wheelchair",       limit: 1
+    t.boolean  "is_elevator",         limit: 1
+    t.boolean  "is_indoor_fireplace", limit: 1
+    t.boolean  "b_w_intercom",        limit: 1
+    t.boolean  "is_doorman",          limit: 1
+    t.boolean  "is_pool",             limit: 1
+    t.boolean  "is_hottub",           limit: 1
+    t.boolean  "is_gym",              limit: 1
+    t.boolean  "is_24h_checkin",      limit: 1
+    t.boolean  "is_hangers",          limit: 1
+    t.boolean  "is_iron",             limit: 1
+    t.boolean  "is_hair_dryer",       limit: 1
+    t.boolean  "is_laptop_workspace", limit: 1
   end
 
   add_index "rooms", ["user_id"], name: "index_rooms_on_user_id", using: :btree
